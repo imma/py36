@@ -10,6 +10,7 @@ function main {
   ln -nfs ../vendor/virtualenv/bin/virtualenv "$shome/bin/virtualenv36"
   ln -nfs ../vendor/virtualenv/bin/pipenv "$shome/bin/pipenv36"
   ln -nfs ../vendor/virtualenv/bin/flake8 "$shome/bin/flake36"
+  ln -nfs ../vendor/virtualenv/bin/autopep8 "$shome/bin/"
 }
 
 main "$@"
