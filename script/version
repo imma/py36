@@ -5,7 +5,7 @@ function version {
   source "$shome/script/profile"
 
   local ver_pipenv36="$(pipenv36 --version 2>/dev/null | awk '{print $3}' || true)"
-  jq -n --arg py36 "$ver_py36" '{py36: $py36}'
+  jq -n --arg pipenv36 "$ver_pipenv36" '{pipenv36: $pipenv36}'
 }
 
 version "$@"
