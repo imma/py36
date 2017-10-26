@@ -1,3 +1,4 @@
 /bin/*36
+!/bin/pipenv36
 /bin/autopep8
 /vendor

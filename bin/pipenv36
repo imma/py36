@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+function main {
+  local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
+  source "${BLOCK_PATH:-"$shome/work"}/block/script/profile" ~
+  source normalize  
+
+  export PATH="$shome/vendor/virtualenv/bin:$PATH"
+  exec "$shome/vendor/virtualenv/bin/pipenv" "$@"
+}
+
+source sub "$BASH_SOURCE" "$@"
