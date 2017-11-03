@@ -6,6 +6,7 @@ function main {
 
   cd "$shome"
   pyenv install -s
+  pip install pipenv
 }
 
 main "$@"

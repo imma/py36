@@ -6,7 +6,8 @@ function version {
 
   cd "$shome"
   local ver_py36="$(python --version 2>&1 | awk '$1 == "Python" {print $2}' || true)"
-  jq -n --arg py36 "$ver_py36" '{py36: $py36}'
+  local ver_pipenv36="$(pipenv --version 2>&1 | awk '{print $3}' || true)"
+  jq -n --arg py36 "$ver_py36" --arg pipenv36 "$ver_pipenv36" '{py36: $py36, pipenv36: $pipenv36}'
 }
 
 version "$@"
