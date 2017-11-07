@@ -5,8 +5,7 @@ function main {
   source "$shome/script/profile"
 
   cd "$shome"
-  pyenv install -s
-  pip install pipenv
+  block compile pyenv
 }
 
 main "$@"
